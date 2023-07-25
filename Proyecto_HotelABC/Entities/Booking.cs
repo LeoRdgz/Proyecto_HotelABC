@@ -23,10 +23,6 @@ namespace Proyecto_HotelABC.Entities
         public int? CountId { get; set; }
         public Count User { get; set; }
 
-        [ForeignKey("SuiteNames")]
-        public int? SuiteId { get; set; }
-        public SuiteNames SuiteName { get; set; }
-
-
+       
     }
 }
