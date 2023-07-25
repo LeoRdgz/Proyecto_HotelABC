@@ -26,8 +26,8 @@
         <Label Grid.Row="2" Content="Correo:" Margin="5" VerticalAlignment="Center"/>
         <TextBox Grid.Row="2" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtCorreo"/>
 
-        <Label Grid.Row="3" Content="Número de teléfono:" Margin="5" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="3" Margin="150,5,5,5" VerticalAlignment="Center" x:Name="txtTelefono"/>
+        <Label Grid.Row="3" Content="Teléfono:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Margin="101,0,5,0" VerticalAlignment="Center" x:Name="txtTelefono"/>
 
         <Label Grid.Row="4" Content="Contraseña:" Margin="5" VerticalAlignment="Center"/>
         <PasswordBox Grid.Row="4" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtContrasena"/>

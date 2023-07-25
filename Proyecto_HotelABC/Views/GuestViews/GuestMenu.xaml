@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="GuestMenu" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="BtnReservar" Content="Reservar" HorizontalAlignment="Left" Height="60" Margin="127,89,0,0" VerticalAlignment="Top" Width="209" Click="BtnReserve"/>
+        <Button x:Name="BtnverReserva" Content="Ver reservacion" HorizontalAlignment="Left" Height="60" Margin="446,89,0,0" VerticalAlignment="Top" Width="209" Click="BtnVerReserva"/>
+
     </Grid>
 </Window>

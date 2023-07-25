@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Proyecto_HotelABC.Entities
 {
-    public class Role
+    public  class SuiteNames
     {
         [Key]
-        public int PkRole { get; set; }
-        public string Name { get; set; }
-
-       
+        public int PkName { get; set; }
+        public string NameS { get; set; }
     }
 }
