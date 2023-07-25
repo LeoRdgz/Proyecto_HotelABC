@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\calendario.png" />
     <None Remove="Images\flecha-hacia-atras.png" />
     <None Remove="Images\gestion-de-carpetas.png" />
     <None Remove="Images\HotelLogin.jpg" />
@@ -30,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\calendario.png" />
     <Resource Include="Images\flecha-hacia-atras.png" />
     <Resource Include="Images\gestion-de-carpetas.png" />
     <Resource Include="Images\HotelLogin.jpg" />

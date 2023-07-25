@@ -6,7 +6,65 @@
         xmlns:local="clr-namespace:Proyecto_HotelABC.Views.GuestViews"
         mc:Ignorable="d"
         Title="GuestMenu" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value=" #4d7565"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SignOffButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <!-- Plantilla específica del segundo estilo -->
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Triggers específicos para el segundo estilo -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Image Source="/Images/calendario.png" Margin="196,62,500,266" />
+        <Image Source="/Images/resenas.png" Margin="477,62,219,266" />
+
+
+        <Button Content="Realizar Reserva" HorizontalAlignment="Left" Margin="186,181,0,0" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}" Height="63" Width="124"/>
+        <Button Content="Realizar Reseña" HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Style="{StaticResource CustomButtonStyle}" Height="63" Width="124"/>
+        <Button x:Name="BTN_SignOff" Content="Cerrar Sesión" HorizontalAlignment="Left" Height="29" Margin="631,338,0,0" VerticalAlignment="Top" Width="116"  Style="{StaticResource SignOffButtonStyle}"/>
+
     </Grid>
 </Window>

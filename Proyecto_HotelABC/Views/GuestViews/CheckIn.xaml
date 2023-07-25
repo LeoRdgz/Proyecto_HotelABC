@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_HotelABC.Views.GuestViews"
         mc:Ignorable="d"
-        Title="CheckIn" Height="450" Width="800">
+        Title="CheckIn" Height="300" Width="500">
     <Window.Resources>
         <Style x:Key="CustomButtonStyle" TargetType="Button">
             <Setter Property="Background" Value=" #4d7565"/>
@@ -58,7 +58,7 @@
         <PasswordBox Grid.Row="4" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtContrasena"/>
 
         <Button x:Name="BTN_CreateCount" Grid.Row="6" Content="Crear cuenta" Margin="0,11,0,23" HorizontalAlignment="Center" Click="CrearCuenta_Click" Width="96"  Style="{StaticResource CustomButtonStyle}"/>
-        <Button x:Name="BTN_GoBack"  HorizontalAlignment="Left" Height="24" Margin="729,53,0,0" VerticalAlignment="Top" Width="61" Click="BTN_GoBack_Click" Background="{x:Null}" BorderThickness="0,0,0,1" Grid.Row="6">
+        <Button x:Name="BTN_GoBack"  HorizontalAlignment="Left" Height="24" Margin="429,44,0,0" VerticalAlignment="Top" Width="61" Click="BTN_GoBack_Click" Background="{x:Null}" BorderThickness="0,0,0,1" Grid.Row="6">
             <Image Source="/Images/flecha-hacia-atras.png" />
         </Button>
     </Grid>
