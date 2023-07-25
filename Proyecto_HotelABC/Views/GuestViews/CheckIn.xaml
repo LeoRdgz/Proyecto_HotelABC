@@ -6,7 +6,32 @@
         xmlns:local="clr-namespace:Proyecto_HotelABC.Views.GuestViews"
         mc:Ignorable="d"
         Title="CheckIn" Height="300" Width="500">
-    <Grid>
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value=" #4d7565"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF74EF93">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -17,23 +42,28 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Nombre:" Margin="5" VerticalAlignment="Center"/>
+        <Label Content="Nombre:" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
         <TextBox Grid.Row="0" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtNombre"/>
 
-        <Label Grid.Row="1" Content="Apellido:" Margin="5" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Apellido:" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
         <TextBox Grid.Row="1" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtApellido"/>
 
-        <Label Grid.Row="2" Content="Correo:" Margin="5" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="Correo:" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
         <TextBox Grid.Row="2" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtCorreo"/>
 
         <Label Grid.Row="3" Content="Teléfono:" Margin="5" VerticalAlignment="Center"/>
         <TextBox Grid.Row="3" Margin="101,0,5,0" VerticalAlignment="Center" x:Name="txtTelefono"/>
 
-        <Label Grid.Row="4" Content="Contraseña:" Margin="5" VerticalAlignment="Center"/>
+        <Label Grid.Row="3" Content="Número de teléfono:" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBox Grid.Row="3" Margin="150,5,5,5" VerticalAlignment="Center" x:Name="txtTelefono"/>
+
+        <Label Grid.Row="4" Content="Contraseña:" Margin="5" VerticalAlignment="Center" FontWeight="Bold"/>
         <PasswordBox Grid.Row="4" Margin="100,5,5,5" VerticalAlignment="Center" x:Name="txtContrasena"/>
 
-        <Button x:Name="BTN_CreateCount" Grid.Row="6" Content="Crear cuenta" Margin="0,11,0,23" HorizontalAlignment="Center" Click="CrearCuenta_Click" Width="96"/>
-        <Button x:Name="BTN_GoBack" Content="Regresar" HorizontalAlignment="Left" Margin="416,42,0,0" Grid.Row="6" VerticalAlignment="Top" Height="27" Width="65" Click="BTN_GoBack_Click"/>
+        <Button x:Name="BTN_CreateCount" Grid.Row="6" Content="Crear cuenta" Margin="0,11,0,23" HorizontalAlignment="Center" Click="CrearCuenta_Click" Width="96"  Style="{StaticResource CustomButtonStyle}"/>
+        <Button x:Name="BTN_GoBack"  HorizontalAlignment="Left" Height="24" Margin="429,44,0,0" VerticalAlignment="Top" Width="61" Click="BTN_GoBack_Click" Background="{x:Null}" BorderThickness="0,0,0,1" Grid.Row="6">
+            <Image Source="/Images/flecha-hacia-atras.png" />
+        </Button>
     </Grid>
 
 

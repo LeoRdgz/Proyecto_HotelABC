@@ -60,6 +60,7 @@ namespace Proyecto_HotelABC.Views.EmployeeViews
                     count.Mail = TXT_Mail.Text;
                     count.PhoneNumber = TXT_PhoneNumber.Text;
                     count.Password = TXT_Password.Text;
+                    count.FkRole = null;
 
                     services.UptadeCount(count);
                 }

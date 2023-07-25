@@ -8,10 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\calendario.png" />
+    <None Remove="Images\flecha-hacia-atras.png" />
+    <None Remove="Images\gestion-de-carpetas.png" />
     <None Remove="Images\HotelLogin.jpg" />
+    <None Remove="Images\invitados.png" />
     <None Remove="Images\key.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\resenas.png" />
+    <None Remove="Images\reserva.png" />
     <None Remove="Images\user.png" />
+    <None Remove="Images\usuario.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,10 +31,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\calendario.png" />
+    <Resource Include="Images\flecha-hacia-atras.png" />
+    <Resource Include="Images\gestion-de-carpetas.png" />
     <Resource Include="Images\HotelLogin.jpg" />
+    <Resource Include="Images\invitados.png" />
     <Resource Include="Images\key.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\resenas.png" />
+    <Resource Include="Images\reserva.png" />
     <Resource Include="Images\user.png" />
+    <Resource Include="Images\usuario.png" />
   </ItemGroup>
 
 </Project>
