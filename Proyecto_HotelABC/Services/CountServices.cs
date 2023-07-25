@@ -64,7 +64,7 @@ namespace Proyecto_HotelABC.Services
                     res.Mail = request.Mail;
                     res.PhoneNumber = request.PhoneNumber;
                     res.Password = request.Password;
-                    res.FkRole = request.FkRole;
+                    res.FkRole = request.FkRole ?? 3;
 
                     _context.Update(res);
                     _context.SaveChanges();

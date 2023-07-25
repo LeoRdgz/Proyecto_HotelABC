@@ -6,6 +6,43 @@
         xmlns:local="clr-namespace:Proyecto_HotelABC.Views.EmployeeViews"
         mc:Ignorable="d"
         Title="ManageGuest" Height="580" Width="800">
+    <Window.Resources>
+        <Style x:Key="CustomDataGridStyle" TargetType="DataGrid">
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="BorderBrush" Value=" #4d7565"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowBackground" Value="DarkGreen"/>
+            <Setter Property="AlternatingRowBackground" Value=" #4d7565"/>
+            <Setter Property="RowHeight" Value="30"/>
+            <Setter Property="ColumnHeaderHeight" Value="30"/>
+            <Setter Property="Foreground" Value="black"/>
+            <!-- Otras propiedades y estilos que desees personalizar -->
+        </Style>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value=" #4d7565"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid >
         <Label Content="ID Cuenta" HorizontalAlignment="Left" Height="24" Margin="2,28,0,0" VerticalAlignment="Top" Width="176" FontFamily="Segoe UI Semibold"/>
 
@@ -124,15 +161,15 @@
             </TextBox.Background>
         </TextBox>
         <Label Content="Contraseña" HorizontalAlignment="Left" Height="24" Margin="10,323,0,0" VerticalAlignment="Top" Width="176" FontFamily="Segoe UI Semibold"/>
-        <Button x:Name="BTN_Save" Content="Guardar" HorizontalAlignment="Left" Height="30" Margin="30,441,0,0" VerticalAlignment="Top" Width="108" Click="BTN_Save_Click"/>
-        <DataGrid x:Name="GuestTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="178,58,10,52" >
+        <Button x:Name="BTN_Save" Content="Guardar" HorizontalAlignment="Left" Height="42" Margin="31,408,0,0" VerticalAlignment="Top" Width="109" Click="BTN_Save_Click"  Style="{StaticResource CustomButtonStyle}"/>
+        <DataGrid x:Name="GuestTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="178,58,10,52"  Style="{StaticResource CustomDataGridStyle}" ItemsSource="{Binding Counts}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding PkCount}" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Apellido" Binding="{Binding Lastname}" />
                 <DataGridTextColumn Header="Correo" Binding="{Binding Mail}" />
                 <DataGridTextColumn Header="Telefono" Binding="{Binding PhoneNumber}" />
-                
+
 
                 <DataGridTemplateColumn Header="Editar">
                     <DataGridTemplateColumn.CellTemplate>
@@ -153,9 +190,11 @@
 
 
         </DataGrid>
-        <Button x:Name="BTN_GoBack" Content="Regresar" HorizontalAlignment="Left" Height="24" Margin="715,17,0,0" VerticalAlignment="Top" Width="61" Click="BTN_GoBack_Click"/>
-        <Button x:Name="BTN_Clear" Content="Limpiar" HorizontalAlignment="Left" Height="30" Margin="31,478,0,0" VerticalAlignment="Top" Width="108" Click="BTN_Clear_Click"/>
-        <Button x:Name="BTN_SignOff" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="9,8,0,0" VerticalAlignment="Top" Click="BTN_SignOff_Click"/>
+        <Button x:Name="BTN_GoBack"  HorizontalAlignment="Left" Height="24" Margin="715,17,0,0" VerticalAlignment="Top" Width="61" Click="BTN_GoBack_Click" Background="{x:Null}" BorderThickness="0,0,0,1">
+            <Image Source="/Images/flecha-hacia-atras.png" />
+        </Button>
+        <Button x:Name="BTN_Clear" Content="Limpiar" HorizontalAlignment="Left" Height="43" Margin="31,469,0,0" VerticalAlignment="Top" Width="108" Click="BTN_Clear_Click"  Style="{StaticResource CustomButtonStyle}"/>
+        <Button x:Name="BTN_SignOff" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="9,8,0,0" VerticalAlignment="Top" Click="BTN_SignOff_Click"  Style="{StaticResource CustomButtonStyle}" Height="21" Width="79"/>
 
 
 
