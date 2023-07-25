@@ -26,11 +26,19 @@ namespace Proyecto_HotelABC
     public partial class MainWindow : Window
     {
         LoginServices login = new LoginServices();
+
+        BookingsServices bookings = new BookingsServices();
         public MainWindow()
         {
             InitializeComponent();
+
             login.GenerateRoles();
+
             login.GenerateSuperAdmin();
+
+            bookings.GenerateSuites();
+
+
 
             // Suscribirse al evento PreviewKeyDown del control de contraseña (TXT_Password)
             TXT_Password.PreviewKeyDown += TXT_Password_PreviewKeyDown;

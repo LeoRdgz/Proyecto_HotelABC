@@ -17,5 +17,9 @@ namespace Proyecto_HotelABC.Context
 
         public DbSet<Count> Counts { get; set; }
         public DbSet<Role> Roles { get; set; }
+
+        public DbSet<Booking> Bookings { get; set; }
+
+        public DbSet<SuiteNames> SuiteNames { get; set; }
     }
 }

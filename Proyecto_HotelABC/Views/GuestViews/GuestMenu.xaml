@@ -58,6 +58,10 @@
         </Style>
     </Window.Resources>
     <Grid>
+
+        <Button x:Name="BtnReservar" Content="Reservar" HorizontalAlignment="Left" Height="60" Margin="127,89,0,0" VerticalAlignment="Top" Width="209" Click="BtnReserve"/>
+        <Button x:Name="BtnverReserva" Content="Ver reservacion" HorizontalAlignment="Left" Height="60" Margin="446,89,0,0" VerticalAlignment="Top" Width="209" Click="BtnVerReserva"/>
+
         <Image Source="/Images/calendario.png" Margin="196,62,500,266" />
         <Image Source="/Images/resenas.png" Margin="477,62,219,266" />
 
@@ -65,6 +69,7 @@
         <Button Content="Realizar Reserva" HorizontalAlignment="Left" Margin="186,181,0,0" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}" Height="63" Width="124"/>
         <Button Content="Realizar Reseña" HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Style="{StaticResource CustomButtonStyle}" Height="63" Width="124"/>
         <Button x:Name="BTN_SignOff" Content="Cerrar Sesión" HorizontalAlignment="Left" Height="29" Margin="631,338,0,0" VerticalAlignment="Top" Width="116"  Style="{StaticResource SignOffButtonStyle}"/>
+
 
     </Grid>
 </Window>

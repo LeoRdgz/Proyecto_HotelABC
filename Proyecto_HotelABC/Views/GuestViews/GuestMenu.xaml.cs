@@ -23,5 +23,21 @@ namespace Proyecto_HotelABC.Views.GuestViews
         {
             InitializeComponent();
         }
+
+        private void BtnReserve(object sender, RoutedEventArgs e)
+        {
+            BookingView bookingView = new BookingView();
+            this.Close();
+            bookingView.Show();
+            
+        }
+
+        private void BtnVerReserva(object sender, RoutedEventArgs e)
+        {
+            ViewBooking viewBooking = new ViewBooking();
+
+            this.Close();
+            viewBooking.Show();
+        }
     }
 }
