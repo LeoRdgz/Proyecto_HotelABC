@@ -21,5 +21,9 @@ namespace Proyecto_HotelABC.Context
         public DbSet<Booking> Bookings { get; set; }
 
         public DbSet<SuiteNames> SuiteNames { get; set; }
+
+        public DbSet<Review> Reviews { get; set; }
+
+        public DbContext<RoomService> RoomServices { get; set; }
     }
 }
